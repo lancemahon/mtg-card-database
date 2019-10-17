@@ -23,7 +23,11 @@ const deckSchema = new mongoose.Schema({
   },
   legal: {
     type: Boolean
-  }
+  },
+  cards: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Card'
+  }]
 }, {
   timestamps: true
 })
