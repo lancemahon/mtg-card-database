@@ -24,13 +24,7 @@ const deckSchema = new mongoose.Schema({
   legal: {
     type: Boolean
   },
-  cards: [{
-    // type: mongoose.Schema.Types.ObjectId, --> tried this, will try again later
-    // ref: 'Card', -->
-    type: String, // this will be an imageUrl I guess
-    value: [String],
-    required: true
-  }]
+  cards: [String]
 }, {
   timestamps: true
 })
