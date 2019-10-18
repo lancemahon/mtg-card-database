@@ -25,8 +25,10 @@ const deckSchema = new mongoose.Schema({
     type: Boolean
   },
   cards: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Card',
+    // type: mongoose.Schema.Types.ObjectId, --> tried this, will try again later
+    // ref: 'Card', -->
+    type: String, // this will be an imageUrl I guess
+    value: [String],
     required: true
   }]
 }, {
