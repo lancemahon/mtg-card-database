@@ -1,24 +1,17 @@
 const mongoose = require('mongoose')
 
 const cardSchema = new mongoose.Schema({
-  id: {
+  name: {
     type: String
   },
-  name: {
-    type: String,
-    required: true
-  },
   manaCost: {
-    type: String,
-    required: true
+    type: String
   },
   cmc: {
-    type: Number,
-    required: true
+    type: Number
   },
   colors: {
-    type: Array,
-    required: true
+    type: Array
   },
   type: {
     type: String
@@ -33,12 +26,10 @@ const cardSchema = new mongoose.Schema({
     type: String
   },
   rarity: {
-    type: String,
-    required: true
+    type: String
   },
   set: {
-    type: String,
-    required: true
+    type: String
   },
   text: {
     type: String
@@ -51,6 +42,9 @@ const cardSchema = new mongoose.Schema({
   },
   toughness: {
     type: Number
+  },
+  imageUrl: {
+    type: String
   }
 }, {
   timestamps: true
